@@ -1,0 +1,150 @@
+:root {
+    /* fonts */
+    --body-font: Georgia, 'Times New Roman', Times, serif;
+    --heading-font: "Berkshire Swash", Georgia, 'Times New Roman', Times, serif;
+    /* colors */
+    --color-one: #ffffff;
+    --color-two: #2ed0dc;
+    --color-three: #c4e8d0;
+    --color-four: #948eb8;
+    --color-five: #3c283e;
+    /* sizes */
+    --medium-font: 1.3rem;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--color-five);
+    color: var(--color-one);
+    position: relative;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--heading-font);
+    
+}
+
+/* header styles */
+
+header, footer {
+    background-color: #3c283e;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+header h1, footer h3 {
+    color: var(--color-three);
+    text-wrap: nowrap;
+}
+
+nav {
+    color: var(--color-one);
+    font-family: var(--heading-font);
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+    font-size: var(--medium-font);
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a.current {
+    color: var(--color-two);
+}
+
+/* main styles */
+
+main {
+    padding: 1rem;
+    min-height: calc(100vh - 7rem - 8.8rem);
+    background-color: var(--color-four);
+}
+
+/* footer styles */
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* card holder element styles */
+.story-elements {
+    max-width: 80%;
+    margin: auto;
+}
+
+/* card styles */
+.card {
+    background-color: var(--color-one);
+    color: var(--color-five);
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    border: .2rem solid var(--color-five);
+    border-radius: 1rem;
+    overflow: hidden;
+    font-size: 1.2rem;
+}
+
+.card h2 {
+    background-color: var(--color-three);
+    padding: 1rem;
+    border-bottom: .2rem solid var(--color-five);
+    margin-bottom: .5rem;
+}
+
+.card hr {
+    background-color: var(--color-five);
+    height: .15rem;
+    border: none;
+    border-radius: .5rem;
+    margin: .5rem;
+}
+
+.card button {
+    background-color: var(--color-three);
+    border: 2px solid var(--color-five);
+    padding: .5rem;
+    border-radius: .5rem;
+    font-family: var(--heading-font);
+    font-size: 1.1rem;
+}
+
+.card p, .card button {
+    margin-bottom: .5rem;
+}
+
+@keyframes card-hover {
+    0% {
+        background-color: var(--color-three);
+    }
+    100% {
+        background-color: var(--color-two);
+    }
+}
+
+@keyframes card-out {
+    0% {
+        background-color: var(--color-two);
+    }
+    100% {
+        background-color: var(--color-three);
+    }
+}
+
+.card.was-hovered:not(.card:hover) h2,  .card button.was-hovered:not(button:hover) {
+    animation: card-out 2s forwards;
+}
+
+.card:hover h2, .card button:hover {
+    animation: card-hover 2s forwards;
+}

@@ -1,0 +1,63 @@
+:root {
+    /* fonts */
+    --body-font: Georgia, 'Times New Roman', Times, serif;
+    --heading-font: "Berkshire Swash", Georgia, 'Times New Roman', Times, serif;
+    /* colors */
+    --color-one: #ffffff;
+    --color-two: #2ed0dc;
+    --color-three: #c4e8d0;
+    --color-four: #948eb8;
+    --color-five: #3c283e;
+}
+
+body {
+    font-family: var(--body-font);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--heading-font);
+}
+
+div {
+    padding: 1rem;
+}
+
+div.one {
+    background-color: var(--color-one);
+}
+div.two {
+    background-color: var(--color-two);
+}
+div.three {
+    background-color: var(--color-three);
+}
+div.four {
+    background-color: var(--color-four);
+}
+div.five {
+    background-color: var(--color-five);
+}
+
+p.one, h2.one {
+    color: var(--color-one);
+}
+p.two, h2.two {
+    color: var(--color-two);
+}
+p.three, h2.three {
+    color: var(--color-three);
+}
+p.four, h2.four {
+    color: var(--color-four);
+}
+p.five, h2.five {
+    color: var(--color-five);
+}
+
+.hide {
+    display: none;
+}
+
+.half-okay {
+    text-decoration: line-through;
+}
