@@ -1,18 +1,19 @@
 import { getRandomListItem, getJson } from "./utility.mjs";
 import Person from "./Person.mjs";
 
+let wordListsUrl = "https://github.com/codebyhannah/Story-Idea-Generator/blob/main/json/word-lists.json";
+
 export default class Protagonist extends Person {
     constructor(ageMin = 1, ageMax = 100) {
         super(ageMin, ageMax);
         this.faveColor;
         this.likes = [];
         this.dislikes = [];
-        //this.name = super.personName;
     }
     async init() {
         await super.init();
         
-        let lists = await getJson("../json/word-lists.json");
+        let lists = await getJson(wordListsUrl);
         
         let colorsList = lists.colors;
         this.faveColor = getRandomListItem(colorsList);

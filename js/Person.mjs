@@ -1,6 +1,8 @@
 import getName from "./names.mjs";
 import { getRandomListItem, getRandomNumber, getJson } from "./utility.mjs";
 
+let wordListsUrl = "https://github.com/codebyhannah/Story-Idea-Generator/blob/main/json/word-lists.json";
+
 export default class Person {
     constructor(ageMin = 1, ageMax = 100) {
         this.name;
@@ -12,7 +14,7 @@ export default class Person {
     }
     async init() {
         this.name = await getName();
-        let lists = await getJson("../json/word-lists.json");
+        let lists = await getJson(wordListsUrl);
 
         let gendersList = lists.genders;
         this.gender = getRandomListItem(gendersList);

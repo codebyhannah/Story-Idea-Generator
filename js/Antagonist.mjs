@@ -2,6 +2,8 @@ import { getRandomListItem, getRandomNumber, getJson } from "./utility.mjs";
 import Person from "./Person.mjs";
 import madlibRandom, { madlibFromList } from "./madlib.mjs";
 
+let wordListsUrl = "https://github.com/codebyhannah/Story-Idea-Generator/blob/main/json/word-lists.json";
+
 
 export default class Antagonist extends Person {
     constructor(ageMin = 1, ageMax = 100) {
@@ -12,7 +14,7 @@ export default class Antagonist extends Person {
     }
     async init() {
         await super.init();
-        let lists = await getJson("../json/word-lists.json");
+        let lists = await getJson(wordListsUrl);
         
         let motivationsList = lists.motivations;
         this.motivation = getRandomListItem(motivationsList);

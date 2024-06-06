@@ -1,5 +1,7 @@
 import { getRandomListItem, getJson } from "./utility.mjs";
 
+let wordListsUrl = "https://github.com/codebyhannah/Story-Idea-Generator/blob/main/json/word-lists.json";
+
 export default class Plot {
     constructor() {
         this.plot;
@@ -7,7 +9,7 @@ export default class Plot {
     async init() {
         // plots derived from https://en.wikipedia.org/wiki/The_Seven_Basic_Plots
 
-        let lists = await getJson("../json/word-lists.json");
+        let lists = await getJson(wordListsUrl);
         let templates = lists.plotTemplates;
         this.template = getRandomListItem(templates);
     }
