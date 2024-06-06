@@ -53,8 +53,7 @@ let antag = new Antagonist(50,100);
 await antag.init();
 console.log(antag.name);
 */
-/*
-console.log("plot:");
+
 import Plot from "./Plot.mjs";
 let plot = new Plot();
 await plot.init();
@@ -65,13 +64,23 @@ import Antagonist from "./Antagonist.mjs";
 import getSideCharacters from "./sideCharacters.mjs";
 let setting = await new Setting;
 await setting.init();
+console.log("setting:");
+console.log(setting);
 let protag = new Protagonist(20,40);
 await protag.init();
+console.log("protagonist:");
+console.log(protag);
 let antag = await new Antagonist(50,100);
 await antag.init();
+console.log("antagonist:");
+console.log(antag);
 let sideCharacters = await getSideCharacters(5);
-let filled = plot.fillInBlanks(protag, antag, sideCharacters, setting);
-console.log(filled);
-*/
+console.log("side characters:");
+console.log(sideCharacters);
+
+let filledPlot = plot.fillInBlanks(protag, antag, sideCharacters, setting);
+console.log("plot:");
+console.log(filledPlot);
+
 
 // get a random number of side characters between 1 and 15 for companions as an array, then list out as strings in plot.
