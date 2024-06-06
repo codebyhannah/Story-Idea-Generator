@@ -1,6 +1,6 @@
 import { getRandomListItem, getJson } from "./utility.mjs";
 
-let wordListsUrl = "https://github.com/codebyhannah/Story-Idea-Generator/blob/main/json/word-lists.json";
+let wordListsUrl = "https://codebyhannah.github.io/Story-Idea-Generator/json/word-lists.json"
 
 export default class Plot {
     constructor() {

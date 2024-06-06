@@ -2,7 +2,7 @@ import { getRandomListItem, getRandomNumber, getJson } from "./utility.mjs";
 import Person from "./Person.mjs";
 import madlibRandom, { madlibFromList } from "./madlib.mjs";
 
-let wordListsUrl = "https://github.com/codebyhannah/Story-Idea-Generator/blob/main/json/word-lists.json";
+let wordListsUrl = "https://codebyhannah.github.io/Story-Idea-Generator/json/word-lists.json"
 
 
 export default class Antagonist extends Person {
