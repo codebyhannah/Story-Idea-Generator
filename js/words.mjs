@@ -1,4 +1,4 @@
-export async function getWord(part) {
+async function getRandomWordByPartOfSpeech(part) {
     // Available parts of speech include noun, pronoun, verb, adjective, adverb, preposition, and conjunction
     let res = "";
     /*do {*/
@@ -20,4 +20,8 @@ export async function getWord(part) {
             console.error(error);
         }
     return res.word;
+}
+
+export default async function getWord(part) {
+    return getRandomWordByPartOfSpeech(part);
 }

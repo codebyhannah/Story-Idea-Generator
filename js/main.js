@@ -27,4 +27,21 @@ console.log(w);
 */
 /*
 import { madlib } from "./madlib.mjs";
-console.log(await madlib());*/
+console.log(await madlib("I have the _adjective_ _noun_."));*/
+/*
+import Setting from "./Setting.mjs"; 
+let setting = new Setting;
+setting.init();*/
+
+/*import Person from "./Person.mjs";
+let person = new Person(15,20);
+person.init();
+// include option for age range input on person?*/
+/*
+import Protagonist from "./Protagonist.mjs";
+let protag = new Protagonist(20,40);
+protag.init();*/
+/*
+import Antagonist from "./Antagonist.mjs";
+let antag = new Antagonist(50,100);
+antag.init();*/

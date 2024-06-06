@@ -1,0 +1,16 @@
+{
+    "plotTemplates": [],
+    "placeTemplates": ["#place# of _noun_", "_adjective_ #place#", "#place# of _verb_", "#place# of _adjective_ _noun_"],
+    "placeWords": ["forest", "mountain", "mountains", "lake", "village", "kingdom", "tower", "valley", "city", "town", "land", "dimension", "realm", "field", "ravine", "canyon", "path", "volcano", "castle", "manor", "river", "stream", "country", "hill", "hills", "dungeon", "farm"],
+    "alignments": ["lawful good", "lawful neutral", "lawful evil", "neutral good", "true neutral", "neutral evil", "chaotic good", "chaotic neutral", "chaotic evil"],
+    "colors": ["red", "orange", "light orange", "neon orange", "gold", "yellow", "amber", "neon yellow", "green", "forest green", "light green", "emerald", "neon green", "aqua", "turquoise", "cyan", "teal", "light blue", "sky blue", "blue", "dark blue", "royal blue", "midnight blue", "electric blue", "indigo", "purple", "violet", "lavender", "neon purple", "pink", "light pink", "hot pink", "neon pink", "fuschia", "magenta", "brown", "tan", "light brown", "dark brown", "golden brown", "gray", "light gray", "dark gray", "silver", "white", "cream", "black", "pearl", "iridescent"],
+    "hairColors": ["blonde", "brown", "black", "red", "grey", "white"],
+    "eyeColors": ["blue", "grey", "green", "brown", "hazel", "black", "amber"],
+    "genders": ["male", "female"],
+    "organizationTemplates": ["_adjective_", "_noun_", "_adjective_ _noun_"],
+    "organizations": ["organization", "research facility", "facility", "agency", "bureau", "department", "cult", "government", "league", "criminal organization","resistance", "school", "company", "corporation", "military"],
+    "motivations": ["world domination", "freedom", "money", "power", "love", "fame", "knowledge", "control", "superiority", "fear of failure", "fear of death", "fear", "revenge", "rebellion", "prophecy", "rivalry", "chaos", "survival", "shame", "paranoia", "political power", "rage", "making up for past failures", "injustice", "fear of the unknown", "loneliness"],
+    "likes": ["good food", "music", "nature", "traveling", "spending time with friends and family", "learning new things", "relaxing", "helping others", "art"],
+    "dislikes": ["conflict", "failure", "injustice", "pain", "uncertainty", "criticism", "loneliness", "embarrassment"],
+    "codeNameTemplates": ["'_adjective_' #name#", "#name# the _adjective_", "_adjective_ _noun_"]
+}

@@ -36,10 +36,10 @@ function getNameyName(options) {
   return window.fetch('https://namey.muffinlabs.com/name.json?' + query, { mode: 'cors' })
         .then(function(d) { return d.json(); })
         .then(function(d) {
-            return d;
+            return d[0];
         });
 }
 
-export async function getName(nameType, commonality = "all") {
+export default async function getName(nameType, commonality = "all") {
   return await getNameyName({ type: nameType, with_surname: true, frequency: commonality});
 }
