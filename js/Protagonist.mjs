@@ -7,9 +7,11 @@ export default class Protagonist extends Person {
         this.faveColor;
         this.likes = [];
         this.dislikes = [];
+        //this.name = super.personName;
     }
     async init() {
-        super.init();
+        await super.init();
+        
         let lists = await getJson("../json/word-lists.json");
         
         let colorsList = lists.colors;
@@ -28,16 +30,5 @@ export default class Protagonist extends Person {
             this.dislikes.push(getRandomListItem(dislikesList));
             count ++;
         } while(count != 2);
-        this.logProtag();
-    }
-
-    logProtag() {
-        console.log(this.faveColor);
-         this.likes.forEach(like => {
-            console.log(like);
-        });
-        this.dislikes.forEach(dislike => {
-            console.log(dislike);
-        });
     }
 }

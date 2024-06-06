@@ -38,19 +38,5 @@ export default class Person {
         this.hairColor = getRandomListItem(hairList);
         let alignmentsList = lists.alignments;
         this.alignment = getRandomListItem(alignmentsList);
-        this.logPerson();
-    }
-
-    get personName() {
-        return this.name;
-    }
-
-    logPerson() {
-        console.log(this.name);
-        console.log(this.age);
-        console.log(this.gender);
-        console.log(this.eyeColor);
-        console.log(this.hairColor);
-        console.log(this.alignment);
     }
 }

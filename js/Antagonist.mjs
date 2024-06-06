@@ -30,14 +30,6 @@ export default class Antagonist extends Person {
         } else {
             this.organization = await this.createOrganization(lists);
         }
-
-        this.logAntag();
-    }
-
-    logAntag() {
-        console.log(this.codeName);
-        console.log(this.motivation);
-        console.log(this.organization);
     }
 
     async createOrganization(lists) {
@@ -57,13 +49,12 @@ export default class Antagonist extends Person {
         let codeNameTemplate = getRandomListItem(codeNameTemplatesList);
 
         if (codeNameTemplate.includes("#")) {
-            let name = super.personName;
             let namePartNum = getRandomNumber(1,3);
             let nameParts = [];
             if (namePartNum == 1) {
-                nameParts.push(name);
+                nameParts.push(this.name);
             } else {
-                nameParts = name.split(" ");
+                nameParts = this.name.split(" ");
             }
             // add name
             codeNameTemplate = madlibFromList(codeNameTemplate,nameParts, "name")

@@ -13,9 +13,5 @@ export default class Setting {
         let joined = madlibFromList(template, placeWords, "place");
         let setting = await madlibRandom(joined);
         this.setting = setting;
-        this.logSetting()
-    }
-    logSetting() {
-        console.log(this.setting);
     }
 }

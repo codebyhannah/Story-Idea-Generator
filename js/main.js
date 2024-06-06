@@ -28,24 +28,50 @@ console.log(w);
 /*
 import { madlib } from "./madlib.mjs";
 console.log(await madlib("I have the _adjective_ _noun_."));*/
-
+/*
 console.log("setting:");
 import Setting from "./Setting.mjs"; 
 let setting = new Setting;
-setting.init();
-
+await setting.init();
+*/
+/*
 console.log("person:");
 import Person from "./Person.mjs";
 let person = new Person(15,20);
-person.init();
+await person.init();
 // include option for age range input on person?*/
-
+/*
 console.log("protagonist:");
 import Protagonist from "./Protagonist.mjs";
 let protag = new Protagonist(20,40);
-protag.init();
-
+await protag.init();
+*/
+/*
 console.log("antagonist:");
 import Antagonist from "./Antagonist.mjs";
 let antag = new Antagonist(50,100);
-antag.init();
+await antag.init();
+console.log(antag.name);
+*/
+/*
+console.log("plot:");
+import Plot from "./Plot.mjs";
+let plot = new Plot();
+await plot.init();
+
+import Setting from "./Setting.mjs";
+import Protagonist from "./Protagonist.mjs";
+import Antagonist from "./Antagonist.mjs";
+import getSideCharacters from "./sideCharacters.mjs";
+let setting = await new Setting;
+await setting.init();
+let protag = new Protagonist(20,40);
+await protag.init();
+let antag = await new Antagonist(50,100);
+await antag.init();
+let sideCharacters = await getSideCharacters(5);
+let filled = plot.fillInBlanks(protag, antag, sideCharacters, setting);
+console.log(filled);
+*/
+
+// get a random number of side characters between 1 and 15 for companions as an array, then list out as strings in plot.
