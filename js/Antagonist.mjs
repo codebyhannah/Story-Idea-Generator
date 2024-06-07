@@ -5,8 +5,8 @@ import madlibRandom, { madlibFromList } from "./madlib.mjs";
 let wordListsUrl = "https://codebyhannah.github.io/Story-Idea-Generator/json/word-lists.json"
 
 export default class Antagonist extends Person {
-    constructor(ageMin = 1, ageMax = 100) {
-        super(ageMin, ageMax);
+    constructor(randomizeFn) {
+        super(randomizeFn);
         this.codeName;
         this.motivation;
         this.organization;

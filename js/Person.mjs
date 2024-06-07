@@ -5,9 +5,9 @@ import storyPartCard from "./storyPartCard.mjs";
 let wordListsUrl = "https://codebyhannah.github.io/Story-Idea-Generator/json/word-lists.json"
 
 export default class Person {
-    constructor(randomizeFn, ageMin = 1, ageMax = 100) {
+    constructor(randomizeFn) {
         this.name;
-        this.age = getRandomNumber(ageMin, ageMax);
+        this.age = getRandomNumber(1, 100);
         this.gender;
         this.eyeColor;
         this.hairColor;
