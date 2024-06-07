@@ -9,7 +9,10 @@ let randomizeFn;
 
 async function displayStoryIdea() {
 
-    randomizeFn = (() => {
+    randomizeFn = ((buttonId) => {
+        /*let selector = "." + buttonId;
+        console.log(selector);
+        document.querySelector(selector).replaceWith("hi");*/
         document.querySelector(".storyElements").innerHTML = "";
         displayStoryIdea();
     });

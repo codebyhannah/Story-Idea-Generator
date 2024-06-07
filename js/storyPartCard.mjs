@@ -29,6 +29,7 @@ export default class storyPartCard {
         button.addEventListener("mouseover",(e => {
             button.classList.add("was-hovered");
         }));
-        button.addEventListener("click", this.randomizeFn);
+        let id = button.getAttribute("data-id");
+        button.addEventListener("click", this.randomizeFn.bind(this, id));
     }
 }
