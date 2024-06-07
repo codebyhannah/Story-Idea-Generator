@@ -35,6 +35,7 @@ header, footer {
     padding: 1rem;
     display: flex;
     align-items: center;
+    
 }
 
 header h1, footer h3 {
@@ -42,10 +43,15 @@ header h1, footer h3 {
     text-wrap: nowrap;
 }
 
+footer p {
+    margin: auto;
+}
+
 nav {
     color: var(--color-one);
     font-family: var(--heading-font);
     display: flex;
+    flex-wrap: wrap;
     align-content: center;
     justify-content: space-evenly;
     padding: 1rem;

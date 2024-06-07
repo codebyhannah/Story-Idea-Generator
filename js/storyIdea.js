@@ -6,16 +6,17 @@ import { getRandomNumber } from "./utility.mjs";
 import Plot from "./Plot.mjs";
 
 async function displayStoryIdea() {
-    let plot = new Plot();
+    
+    let plot = await new Plot();
     await plot.init();
 
     let setting = await new Setting;
     await setting.init();
 
-    let protag = new Protagonist(20,40);
+    let protag = new Protagonist();
     await protag.init();
 
-    let antag = await new Antagonist(50,100);
+    let antag = await new Antagonist();
     await antag.init();
 
     let amount = getRandomNumber(1,5);
@@ -36,6 +37,7 @@ async function displayStoryIdea() {
     sideCharacters.forEach(character => {
         character.DisplayCard(sides);
     });
+    
 }
 
 displayStoryIdea();
