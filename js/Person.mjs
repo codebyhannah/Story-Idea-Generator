@@ -58,7 +58,6 @@ export default class Person {
         return data;
     }
     DisplayCard(containerElem) {
-        console.log(containerElem);
         let data = this.getDataForDisplay();
         let card = new storyPartCard(data, containerElem);
         card.renderStoryPartCard();

@@ -88,6 +88,7 @@ footer {
     color: var(--color-five);
     text-align: center;
     width: 100%;
+    
     margin: auto;
     border: .2rem solid var(--color-five);
     border-radius: 1rem;
@@ -96,8 +97,8 @@ footer {
     margin-bottom: 1rem;
 }
 
-.sideCharacters .card {
-    margin: 1rem;
+.protagonist-card, .antagonist-card, .setting-card {
+    max-width: 30rem;
 }
 
 .card h2 {
@@ -131,6 +132,8 @@ footer {
 .card .details {
     padding: 0 1rem;
     text-align: left;
+    width: fit-content;
+    margin: 0 auto;
 }
 .card .details .label {
     font-family: var(--heading-font);
@@ -152,6 +155,14 @@ footer {
 
 div.sideCharacters {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sideCharacters .card {
+    margin: 1rem;
+    min-width: 10rem;
+    max-width: 18rem;
 }
 
 @keyframes card-hover {

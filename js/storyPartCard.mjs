@@ -3,6 +3,7 @@ import { renderWithTemplate } from "./utility.mjs";
 function storyPartCardTemplate(storyPartData) {
     let card = document.createElement("div");
     card.classList.add("card");
+    card.classList.add(`${storyPartData.title.toLowerCase().replace(" ", "-")}-card`)
     card.innerHTML = `<h2 class="title">${storyPartData.title}</h2>
         <div class="details">${storyPartData.details}</div>
         <hr>
