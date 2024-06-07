@@ -12,9 +12,10 @@ function storyPartCardTemplate(storyPartData) {
 }
 
 export default class storyPartCard {
-    constructor(storyPartData, containerElem = document.querySelector(".storyElements")) {
+    constructor(storyPartData, randomizeFn, containerElem = document.querySelector(".storyElements")) {
         this.storyPartData = storyPartData;
         this.containerElem = containerElem;
+        this.randomizeFn  = randomizeFn
     }
     renderStoryPartCard() {
         let card = renderWithTemplate(storyPartCardTemplate(this.storyPartData), this.containerElem);
@@ -26,5 +27,6 @@ export default class storyPartCard {
         button.addEventListener("mouseover",(e => {
             button.classList.add("was-hovered");
         }));
+        button.addEventListener("click", this.randomizeFn);
     }
 }

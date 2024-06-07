@@ -5,13 +5,14 @@ import storyPartCard from "./storyPartCard.mjs";
 let wordListsUrl = "https://codebyhannah.github.io/Story-Idea-Generator/json/word-lists.json"
 
 export default class Person {
-    constructor(ageMin = 1, ageMax = 100) {
+    constructor(randomizeFn, ageMin = 1, ageMax = 100) {
         this.name;
         this.age = getRandomNumber(ageMin, ageMax);
         this.gender;
         this.eyeColor;
         this.hairColor;
         this.alignment;
+        this.randomizeFn = randomizeFn;
     }
     async init() {
         let lists = await getJson(wordListsUrl);
@@ -59,7 +60,7 @@ export default class Person {
     }
     DisplayCard(containerElem) {
         let data = this.getDataForDisplay();
-        let card = new storyPartCard(data, containerElem);
+        let card = new storyPartCard(data, this.randomizeFn, containerElem);
         card.renderStoryPartCard();
     }
 }

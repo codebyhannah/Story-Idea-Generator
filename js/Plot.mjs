@@ -4,8 +4,9 @@ import storyPartCard from "./storyPartCard.mjs";
 let wordListsUrl = "https://codebyhannah.github.io/Story-Idea-Generator/json/word-lists.json"
 
 export default class Plot {
-    constructor() {
+    constructor(randomizeFn) {
         this.plot;
+        this.randomizeFn = randomizeFn;
     }
     async init() {
         // plots derived from https://en.wikipedia.org/wiki/The_Seven_Basic_Plots
@@ -65,7 +66,7 @@ export default class Plot {
     }
     DisplayCard() {
         let data = this.getDataForDisplay();
-        let card = new storyPartCard(data);
+        let card = new storyPartCard(data, this.randomizeFn);
         card.renderStoryPartCard();
     }
 

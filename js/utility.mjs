@@ -14,13 +14,15 @@ export function getRandomNumber(min = 0, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
  
-export function renderWithTemplate(template,      containerElem, data, callback, clear = false) {
+export function renderWithTemplate(template, containerElem, callback, clear = false) {
     if (clear) {
         containerElem.innerHtml = "";
     }
-    containerElem.appendChild(template);
     if(callback) {
-        callback(data);
+        callback(template);
+    }
+    else{
+        containerElem.appendChild(template);
     }
     return template;
 }

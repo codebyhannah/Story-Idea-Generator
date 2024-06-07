@@ -5,8 +5,9 @@ import storyPartCard from "./storyPartCard.mjs";
 let wordListsUrl = "https://codebyhannah.github.io/Story-Idea-Generator/json/word-lists.json"
 
 export default class Setting {
-    constructor() {
+    constructor(randomizeFn) {
         this.setting;
+        this.randomizeFn = randomizeFn;
     }
     async init() {
         let lists = await getJson(wordListsUrl);
@@ -28,7 +29,7 @@ export default class Setting {
     }
     DisplayCard() {
         let data = this.getDataForDisplay();
-        let card = new storyPartCard(data);
+        let card = new storyPartCard(data, this.randomizeFn);
         card.renderStoryPartCard();
     }
 }

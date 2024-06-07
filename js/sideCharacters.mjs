@@ -1,6 +1,6 @@
 import Person from "./Person.mjs";
 
-export default async function getSideCharacters(amount) {
+export default async function getSideCharacters(amount, randomizeFn) {
     let sideCharacters = [];
     do {
         let person = new sideCharacter();
