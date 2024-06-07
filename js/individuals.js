@@ -1,4 +1,3 @@
-import { getParam } from "./utility.mjs";
 import Setting from "./Setting.mjs";
 import Protagonist from "./Protagonist.mjs";
 import Antagonist from "./Antagonist.mjs";
