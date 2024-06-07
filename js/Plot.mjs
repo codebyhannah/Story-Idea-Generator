@@ -1,4 +1,5 @@
 import { getRandomListItem, getJson } from "./utility.mjs";
+import storyPartCard from "./storyPartCard.mjs";
 
 let wordListsUrl = "https://codebyhannah.github.io/Story-Idea-Generator/json/word-lists.json"
 
@@ -22,7 +23,8 @@ export default class Plot {
             }
             return piece;
         });
-        return plain.join("");
+        this.plot = plain.join("");
+        return this.plot;
     }
 
     fillInBlanks(protag, antag, sideCharacters, setting) {
@@ -49,7 +51,22 @@ export default class Plot {
             }
             return piece;
         });
-        return filled.join("");
+        this.plot = filled.join("");
+        return this.plot;
+    }
+    getDataForDisplay() {
+        let htmlString = `<p><span class="label">Plot:</span></p><p>${this.plot}</p>`;
+
+        let data = {
+            title: "Plot", 
+            details: htmlString
+        };
+        return data;
+    }
+    DisplayCard() {
+        let data = this.getDataForDisplay();
+        let card = new storyPartCard(data);
+        card.renderStoryPartCard();
     }
 
 }

@@ -32,4 +32,16 @@ export default class Protagonist extends Person {
             count ++;
         } while(count != 2);
     }
+    getDataForDisplay() {
+        // Overrides Person.getDataForDisplay, can just call super.DisplayCard() and the data will be correct.
+        let data = super.getDataForDisplay();
+        data.title = "Protagonist";
+        data.details += `<p><span class="label">Favorite Color:</span> ${this.faveColor}</p>
+        <p><span class="label">Likes:</span> ${this.likes.join(", ")}</p>
+        <p><span class="label">Dislikes:</span> ${this.dislikes.join(", ")}</p>`;
+        return data;
+    }
+    DisplayCard() {
+        super.DisplayCard();
+    }
 }

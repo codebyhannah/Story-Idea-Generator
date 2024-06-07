@@ -77,8 +77,8 @@ footer {
 }
 
 /* card holder element styles */
-.story-elements {
-    max-width: 80%;
+.storyElements {
+    max-width: 70%;
     margin: auto;
 }
 
@@ -87,12 +87,17 @@ footer {
     background-color: var(--color-one);
     color: var(--color-five);
     text-align: center;
-    width: fit-content;
+    width: 100%;
     margin: auto;
     border: .2rem solid var(--color-five);
     border-radius: 1rem;
     overflow: hidden;
     font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.sideCharacters .card {
+    margin: 1rem;
 }
 
 .card h2 {
@@ -123,6 +128,32 @@ footer {
     margin-bottom: .5rem;
 }
 
+.card .details {
+    padding: 0 1rem;
+    text-align: left;
+}
+.card .details .label {
+    font-family: var(--heading-font);
+    background-color: var(--color-two);
+    padding: .2rem;
+    border-radius: .5rem;
+    line-height: 2rem;
+    margin-right: .3rem;
+}
+
+.card .details ul {
+    list-style-type: none;
+    padding-left: 1.5rem;
+}
+
+.card .details .sub-label {
+    font-family: var(--heading-font);
+}
+
+div.sideCharacters {
+    display: flex;
+}
+
 @keyframes card-hover {
     0% {
         background-color: var(--color-three);
@@ -131,7 +162,6 @@ footer {
         background-color: var(--color-two);
     }
 }
-
 @keyframes card-out {
     0% {
         background-color: var(--color-two);
@@ -141,10 +171,46 @@ footer {
     }
 }
 
-.card.was-hovered:not(.card:hover) h2,  .card button.was-hovered:not(button:hover) {
-    animation: card-out 2s forwards;
+@keyframes button-hover {
+    0% {
+        background-color: var(--color-three);
+    }
+    100% {
+        background-color: var(--color-two);
+        transform: scale(1.5);
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+    }
+}
+@keyframes button-out {
+    0% {
+        transform: scale(1.5);
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+        background-color: var(--color-two);
+    }
+    100% {
+        background-color: var(--color-three);
+    }
 }
 
-.card:hover h2, .card button:hover {
+.card.was-hovered:not(.card:hover) h2 {
+    animation: card-out 2s forwards;
+}
+.card:hover h2 {
     animation: card-hover 2s forwards;
+}
+
+.card.was-hovered:not(.card:hover) .label {
+    animation: card-out 2s reverse forwards;
+}
+.card:hover .label {
+    animation: card-hover 2s reverse forwards;
+}
+
+.card button.was-hovered:not(button:hover) {
+    animation: button-out 2s forwards;
+}
+.card button:hover {
+    animation: button-hover 2s forwards;
 }
