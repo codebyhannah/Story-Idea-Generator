@@ -55,9 +55,10 @@ nav {
 
 nav a {
     text-decoration: none;
+    color: var(--color-one);
 }
 
-nav a.current {
+nav a.current, nav a:hover {
     color: var(--color-two);
 }
 

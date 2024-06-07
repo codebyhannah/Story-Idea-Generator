@@ -1,3 +1,2 @@
-import { loadHeaderFooter } from "./utility.mjs";
-
-await loadHeaderFooter();
+/*import { loadHeaderFooter } from "./utility.mjs";
+loadHeaderFooter();*/
