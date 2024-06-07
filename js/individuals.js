@@ -3,7 +3,7 @@ import Setting from "./Setting.mjs";
 import Protagonist from "./Protagonist.mjs";
 import Antagonist from "./Antagonist.mjs";
 import getSideCharacters from "./sideCharacters.mjs";
-import { getRandomNumber } from "./utility.mjs";
+import { getParam, getRandomNumber } from "./utility.mjs";
 import Plot from "./Plot.mjs";
 
 async function setUp() {
